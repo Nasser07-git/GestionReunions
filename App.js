@@ -20,11 +20,12 @@ const myOption = {
     fontStyle:'italic',
   },
 };
+
 export default class App extends React.Component {
   render() {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="ListReunion">
+        <Stack.Navigator initialRouteName="ListReunion" >
           <Stack.Screen name="ListReunion" component={ListReunion} options={myOption}/>
           <Stack.Screen name="Add" component={AddReunion} options={{...myOption,title:"Ajouter une reunion"}}/>
         </Stack.Navigator>

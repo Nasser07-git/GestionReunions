@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, TextInput, Dimensions, View, TouchableOpacity } from 'react-native';
 import 'react-native-gesture-handler';
+import ReactChipsInput from 'react-native-chips';
 
 var width = Dimensions.get('window').width; //full width
 
@@ -18,7 +19,8 @@ export default class AddReunion extends React.Component {
     };
   }
 
-  onSubmit = async () => {
+  onSubmit = async (event) => {
+    event.preventDefault();
     console.log('onSubmit')
     return fetch('https://60c9e003772a760017204a5d.mockapi.io/api/reu/reunion', {
           method: 'POST',
@@ -37,7 +39,7 @@ export default class AddReunion extends React.Component {
         .then((response) => response.json())
         .then((responseJson) => {
           return responseJson,
-          this.props.navigation.navigate("ListReunion")
+          this.props.navigation.navigate("ListReunion")          
         })
         .catch((error) => {
           throw error;

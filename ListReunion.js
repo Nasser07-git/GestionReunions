@@ -12,6 +12,7 @@ const actions = [
     position: 1
   }
 ];
+
 export default class ListReunion extends React.Component {
 
   constructor(props){

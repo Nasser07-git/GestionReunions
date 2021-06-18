@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { View, Text, StyleSheet, TouchableWithoutFeedback } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { Icon } from 'react-native-elements';
 
 export default class LigneReunion extends React.Component {
@@ -46,14 +46,14 @@ export default class LigneReunion extends React.Component {
             {this.props.listeP} - {this.props.sujet}
           </Text>
         </View>
-        <TouchableWithoutFeedback onPress={()=>this.onDelete(this.props.id)}>
+        <TouchableOpacity onPress={()=>this.onDelete(this.props.id)}>
           <View style={styles.icon} >
             <Icon 
               name='delete'
               type='material'
               color='#e8190e'/>
           </View>
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
       </View>
     )
   }
