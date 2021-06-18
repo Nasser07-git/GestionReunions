@@ -21,6 +21,3 @@ il s'agit d'un puissant outil de développement d'applications mobiles multiplat
  	Codez une fois, utilisez-le partout. 
 	Gagnez du temps et de l'argent en créant des applications multiplateformes. 
 	Mais gardez à l'esprit que vous devez encore effectuer des ajustements spécifiques à la plate-forme.
-- Facile à apprendre :
-	Voir le style de codage du programme Hello World ci-dessous. 
-	Vous pouvez facilement comprendre l'exemple de code suivant si vous connaissez les bases de JavaScript et React.
