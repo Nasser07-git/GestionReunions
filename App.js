@@ -6,25 +6,27 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import AddReunion from './AddReunion'
 import ListReunion from './ListReunion'
-import DetailReunion from './DetailReunion'
-
-//var width = Dimensions.get('window').width; //full width
-//var height = Dimensions.get('window').height; //full height
+import { BorderlessButton } from 'react-native-gesture-handler';
 
 const Stack = createStackNavigator();
 const myOption = {
   title:"Ma Reu",
-  headerTintColor:"black",
-  headerStyle:"#0066f5"
+  headerTintColor:"white",
+  headerStyle:{
+    backgroundColor: '#136dcf',
+  },
+  headerTitleStyle: {
+    fontWeight: 'bold',
+    fontStyle:'italic',
+  },
 };
 export default class App extends React.Component {
   render() {
     return (
       <NavigationContainer>
         <Stack.Navigator initialRouteName="ListReunion">
-          <Stack.Screen name="Liste des reunions" component={ListReunion} options={myOption}/>
-          <Stack.Screen name="Ajouter une reunion" component={AddReunion} />
-          <Stack.Screen name="Detail de la reunion" component={DetailReunion} />
+          <Stack.Screen name="ListReunion" component={ListReunion} options={myOption}/>
+          <Stack.Screen name="Add" component={AddReunion} options={{...myOption,title:"Ajouter une reunion"}}/>
         </Stack.Navigator>
       </NavigationContainer>
     );
@@ -34,8 +36,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#04b8c7',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 });
